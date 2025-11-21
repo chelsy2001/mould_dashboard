@@ -1,0 +1,134 @@
+/* ---------------------- */
+/* Modern Sidebar Styling */
+/* ---------------------- */
+.sidebar-logo {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.sidebar-logo img {
+  width: 120px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.1));
+}
+.sidebar {
+  width: 240px;
+  height: 100vh;
+  background: #ffffff;
+  border-right: 1px solid #e8e8e8;
+  padding: 30px 22px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+
+  /* subtle glass effect */
+  backdrop-filter: blur(8px);
+
+  /* smooth entrance animation */
+  animation: slideIn 0.6s ease forwards;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* Sidebar Title */
+.sidebar h2 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #1a1a1a;
+  letter-spacing: 0.5px;
+}
+
+/* MENU LIST */
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* MENU ITEMS */
+.sidebar ul li {
+  margin-bottom: 12px;
+}
+
+/* MENU LINK BUTTONS */
+.sidebar ul li a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  font-size: 15.5px;
+  padding: 12px 15px;
+  border-radius: 10px;
+
+  color: #555;
+  font-weight: 500;
+
+  background: transparent;
+  transition: 0.25s ease;
+
+  /* animation */
+  transform: translateX(0);
+}
+
+/* ICON SIMULATION (BEFORE) */
+.sidebar ul li a::before {
+  content: "•";
+  font-size: 18px;
+  opacity: 0.5;
+  transition: 0.3s;
+}
+
+/* HOVER EFFECT */
+.sidebar ul li a:hover {
+  background: #edf2ff;
+  color: #2455ff;
+  transform: translateX(6px);
+  box-shadow: 0 3px 10px rgba(220, 228, 255, 0.6);
+}
+
+/* HOVER icon color */
+.sidebar ul li a:hover::before {
+  color: #2455ff;
+  opacity: 1;
+}
+
+/* ACTIVE menu item */
+.sidebar ul li a.active {
+  background: #e3e9ff;
+  color: #1b3fd8;
+  font-weight: 600;
+  transform: translateX(6px);
+  box-shadow: 0 3px 10px rgba(193, 206, 255, 0.8);
+}
+
+.sidebar ul li a.active::before {
+  color: #1b3fd8;
+  opacity: 1;
+}
+/* Sidebar Icons */
+.sidebar ul li a .icon {
+  margin-right: 10px;
+  font-size: 18px;
+  vertical-align: middle;
+}
+.sidebar ul li a:hover .icon {
+  transform: scale(1.1);
+  transition: 0.3s ease;
+}
+/* Sidebar Slide In Animation */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

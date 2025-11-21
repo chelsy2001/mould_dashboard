@@ -1,0 +1,61 @@
+.mode-container {
+  margin-left: 230px;
+  margin-top: 20px;
+  background: #ffffff;
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Buttons row */
+.filter-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+/* Buttons */
+.mode-btn {
+  padding: 9px 22px;
+  border-radius: 8px;
+  background: #f0f4ff;
+  border: 1px solid #cbd7ff;
+  color: #0040ff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.mode-btn.active {
+  background: #0040ff;
+  color: white;
+  box-shadow: 0px 4px 12px rgba(0, 60, 255, 0.4);
+}
+
+.mode-btn:hover {
+  transform: translateY(-2px);
+}
+
+/* Date Button */
+.date-btn {
+  padding: 9px 20px;
+  background: #fff;
+  border: 1px solid #d4d4d4;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+/* Running Shift Text */
+.running-shift {
+  font-weight: 600;
+  color: #003b83;
+  font-size: 15px;
+}
+
+.running-shift span {
+  font-weight: bold;
+  color: #0040ff;
+}

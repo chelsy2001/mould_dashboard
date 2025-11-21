@@ -1,0 +1,99 @@
+/* ----------------------------------------------------
+   HEADER MAIN
+-----------------------------------------------------*/
+.header-bar {
+  margin-left: 230px;
+  height: 70px;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #e6e6e6;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 28px;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  transition: 0.3s ease;
+}
+
+.header-bar.dark-mode {
+  background: rgba(30, 30, 30, 0.9);
+  border-bottom: 1px solid #4a4a4a;
+}
+
+.header-bar h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.header-bar.dark-mode h3 {
+  color: #fff;
+}
+
+/* ----------------------------------------------------
+   RIGHT SECTION (Dark Mode + User)
+-----------------------------------------------------*/
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Username display */
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  background: #f0f4ff;
+  border-radius: 20px;
+  font-size: 14px;
+  color: #003b83;
+  font-weight: 500;
+  box-shadow: 0 2px 4px rgba(0, 80, 255, 0.1);
+}
+
+.header-bar.dark-mode .user-info {
+  background: #333;
+  color: #fff;
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.09);
+}
+
+/* User Icon */
+.user-icon {
+  font-size: 16px;
+}
+
+/* ----------------------------------------------------
+   DARK MODE TOGGLE
+-----------------------------------------------------*/
+.dark-toggle {
+  width: 50px;
+  height: 26px;
+  background: #b9c7ff;
+  border-radius: 20px;
+  cursor: pointer;
+  padding: 3px;
+  position: relative;
+  transition: 0.3s ease;
+}
+
+.dark-toggle.active {
+  background: #222;
+}
+
+.toggle-circle {
+  width: 20px;
+  height: 20px;
+  background: white;
+  border-radius: 50%;
+  transition: 0.3s ease;
+  transform: translateX(0);
+}
+
+.dark-toggle.active .toggle-circle {
+  transform: translateX(24px);
+  background: #00d0ff;
+}
